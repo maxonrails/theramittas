@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TheraMittas</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+    <%= params %>
+    <div class= 'container'>
+        <div class= "page-header">
+            <ul class="nav nav-pills pull-right">
+                <li><%= link_to 'Home', root_path %> </li>
+                <li><%= link_to "All Posts", articles_path %></li>
+                <li><%= link_to 'About', about_path %> </li>
+
+                <% if current_user %>
+                <li><%= current_user.name %> </li>
+                <li><%= link_to 'Log Out', logout_path, method: :delete %></li>
+                    <% else %>
+                <li><%= link_to 'Log In', login_path %></li>
+                <li><%= link_to 'Sign Up', users_new_path %></li>
+                    <% end %>
+            </ul>
+
+            <h1>
+            <%=link_to 'TheraMittas', root_path %>
+            <small>Home of Kalyanamittas</small>
+            </h1>
+        </div>
+
+<% if params[:action] == "home" %>
+
+     <%= yield %>
+
+<% else %>
+        <div class ="row">
+            <div class='col-md-6 col-md-offset-3'>
+            <%= yield %>
+            </div>
+        </div>
+<% end %>
+
+    </div>
+</body>
+</html>

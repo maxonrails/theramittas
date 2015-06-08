@@ -1,0 +1,24 @@
+<h2>
+  <%= link_to article.title, article %>
+</h2>
+
+<p>
+    <!-- rails helper to convert data into HTML for paragraph spacing -->
+    <%= simple_format article.text %>
+</p>
+
+<p>
+    <%= image_tag article.image.url(:large) if article.image.url %><br>
+</p>
+
+<!-- get the text gray and smaller than the font of the article -->
+<p class="text-muted">
+    <small>
+    <!-- time stamp -->
+        <%= article.user.name %> - <%= article.created_at.to_formatted_s(:short) %>
+    </small>
+
+    <small class="pull-right">
+
+    </small>
+</p>

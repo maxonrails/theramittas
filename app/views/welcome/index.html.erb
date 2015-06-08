@@ -1,0 +1,6 @@
+<!-- loop through to display all posts -->
+
+<% @articles.each do |article| %>
+    <%= render 'articles/article', article: article %><br><br>
+    <br><br>
+<% end %>

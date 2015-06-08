@@ -1,0 +1,7 @@
+<%= form_for [@article, Comment.new] do |f| %>
+    <div>
+        <%= f.text_area :body %>
+    </div>
+    <br>
+    <%= f.submit "Add your comment!" %>
+<% end %>
