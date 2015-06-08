@@ -2,7 +2,7 @@ class ArticlesController < ApplicationController
   before_action :authorized?,  only: [:new, :create]
 
   def index
-    @articles = Article.all.order("created_at DESC")
+    @articles = Article.all
   end
 
   def show

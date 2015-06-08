@@ -7,7 +7,7 @@
 </p>
 
 <p>
-<%= image_tag @article.image.url(:large) if @article.image.url %><br>
+    <%= image_tag @article.image.url(:large) if @article.image.exists? %><br>
 </p>
 
 <h6>Comments</h6>
