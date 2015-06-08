@@ -1,6 +1,0 @@
-<h1><%= @pin.title %></h1>
-<p><%= @pin.description %></p>
-
-<%= link_to "Back", root_path %>
-<%= link_to "Edit", edit_pin_path %>
-<%= link_to "Unpin", pin_path, method: :delete, data: { confirm: "Do you really really want to unpin this?"} %>
