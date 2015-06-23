@@ -30,6 +30,7 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'unicorn'
 gem 'bootstrap-sass'
 # Use Capistrano for deployment
+gem 'rspec'
 
 group :production do
   gem 'rails_12factor'
