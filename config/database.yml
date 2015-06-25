@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: thera_mittas_production
-  username: thera_mittas
-  password: <%= ENV['THERA_MITTAS_DATABASE_PASSWORD'] %>
+  username: rails
+  password: <%= ENV['APP_DATABASE_PASSWORD'] %>
